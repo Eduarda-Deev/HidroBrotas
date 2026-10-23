@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f7f5;
+    color: #20352f;
+    line-height: 1.6;
+}
+
+.topo {
+    background: #155b49;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icone-agua {
+    font-size: 36px;
+}
+
+.marca h1 {
+    font-size: 25px;
+}
+
+.marca p {
+    font-size: 13px;
+    color: #d7eee5;
+}
+
+.etiqueta {
+    border: 1px solid #b9e3d1;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.container {
+    width: 86%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.boas-vindas {
+    margin-bottom: 25px;
+}
+
+.sobretitulo {
+    color: #267c60;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.boas-vindas h2 {
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+.boas-vindas p:last-child {
+    color: #64766f;
+}
+
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.cartao {
+    background: white;
+    border: 1px solid #e1eae5;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 4px 14px rgba(22, 65, 49, 0.04);
+    margin-bottom: 18px;
+}
+
+.cartoes .cartao {
+    margin-bottom: 0;
+}
+
+.cartao h3 {
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+.medicao {
+    color: #176b50;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.unidade {
+    font-size: 24px;
+    margin-left: 3px;
+}
+
+.barra {
+    height: 12px;
+    background: #e5eee9;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0 10px;
+}
+
+.barra-preenchida {
+    width: 72%;
+    height: 100%;
+    background: #25a878;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+.status {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.adequado {
+    background: #e0f5e9;
+    color: #176b42;
+}
+
+.atencao {
+    background: #fff2cf;
+    color: #805800;
+}
+
+.baixo {
+    background: #ffead5;
+    color: #8b4b12;
+}
+
+.critico {
+    background: #fde4e4;
+    color: #a32121;
+}
+
+.simulacao {
+    background: #e5efff;
+    color: #285b9a;
+}
+
+.cartao p {
+    color: #64766f;
+    font-size: 14px;
+}
+
+.simulador {
+    margin-top: 20px;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+button {
+    background: #176b50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #104d3b;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #20845e;
+    cursor: pointer;
+}
+
+.observacao {
+    margin-top: 8px;
+    font-size: 12px !important;
+}
+
+footer {
+    background: #e3eee8;
+    color: #50655c;
+    text-align: center;
+    padding: 22px;
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+    .cartoes {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .boas-vindas h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .topo {
+        padding: 16px 4%;
+    }
+
+    .marca h1 {
+        font-size: 21px;
+    }
+
+    .marca p {
+        font-size: 11px;
+    }
+
+    .etiqueta {
+        font-size: 9px;
+        padding: 5px 8px;
+    }
+
+    .cartao {
+        padding: 18px;
+    }
+}
+
+.clima-card {
+    margin: 24px auto;
+    padding: 20px;
+    max-width: 500px;
+    background: #ffffff;
+    border: 1px solid #d8e5dc;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.clima-card h2 {
+    margin-top: 0;
+    color: #245b3c;
+}
+
+.clima-card p {
+    margin: 12px 0;
+}
+
+.clima-horario {
+    color: #666666;
+    font-size: 0.85rem;
+}
+
+.clima-card button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #286747;
+    color: white;
+    cursor: pointer;
+}
+
+.clima-card button:hover {
+    background: #1e4f36;
+}

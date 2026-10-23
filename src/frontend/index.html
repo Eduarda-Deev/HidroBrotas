@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HidroBrotas | Monitoramento da Água</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topo">
+        <div class="marca">
+            <span class="icone-agua">💧</span>
+            <div>
+                <h1>HidroBrotas</h1>
+                <p>Monitoramento inteligente da água</p>
+            </div>
+        </div>
+        <span class="etiqueta">PROTÓTIPO IoT</span>
+    </header>
+
+    <main class="container">
+        <section class="boas-vindas">
+            <p class="sobretitulo">PAINEL DE MONITORAMENTO</p>
+            <h2>Uso consciente da água</h2>
+            <p>Acompanhe o nível simulado da caixa-d'água e confira os alertas do sistema.</p>
+        </section>
+
+        <section class="cartoes">
+            <article class="cartao nivel-cartao">
+                <h3>Nível da caixa-d'água</h3>
+
+                <div class="medicao">
+                    <span id="porcentagem">72</span><span class="unidade">%</span>
+                </div>
+
+                <div class="barra">
+                    <div id="barraNivel" class="barra-preenchida"></div>
+                </div>
+
+                <p id="descricaoNivel">72% da capacidade estimada</p>
+            </article>
+
+            <article class="cartao">
+                <h3>Status do sistema</h3>
+                <div id="status" class="status adequado">Nível adequado</div>
+                <p id="mensagem">O nível está dentro da faixa definida para o protótipo.</p>
+            </article>
+
+            <article class="cartao">
+                <h3>Conexão IoT</h3>
+                <div class="status simulacao">Modo de simulação</div>
+                <p>Os valores exibidos são simulados. O sensor físico ainda não está conectado.</p>
+            </article>
+        </section>
+
+        <section class="cartao simulador">
+            <h3>Simular nível da água</h3>
+            <p>Selecione um valor para testar as regras de alerta do sistema.</p>
+
+            <div class="botoes">
+                <button data-nivel="90">90% — Alto</button>
+                <button data-nivel="45">45% — Médio</button>
+                <button data-nivel="25">25% — Baixo</button>
+                <button data-nivel="10">10% — Crítico</button>
+            </div>
+
+            <label for="controleNivel">Ou escolha outro nível: <strong id="valorControle">72%</strong></label>
+            <input type="range" id="controleNivel" min="0" max="100" value="72">
+        </section>
+
+        <section class="cartao">
+            <h3>Última atualização</h3>
+            <p id="atualizacao">Aguardando leitura...</p>
+            <p class="observacao">Demonstração acadêmica: os alertas não representam uma medição real.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>HidroBrotas — Projeto de Internet das Coisas (IoT)</p>
+        <p>Desenvolvido para o estudo do uso consciente da água em Brotas/SP.</p>
+    </footer>
+
+   
+    
+<section class="clima-card">
+    <h2>Clima em Brotas - SP</h2>
+    <p id="climaStatus">Consultando dados meteorológicos...</p>
+    <p>Temperatura: <strong id="climaTemperatura">--</strong></p>
+    <p>Precipitação atual: <strong id="climaPrecipitacao">--</strong></p>
+    <p class="clima-horario" id="climaHorario"></p>
+    <button id="atualizarClima" type="button">
+        Atualizar clima
+    </button>
+</section>
+
+ <script src="script.js"></script>
+
+
+</body>
+</html>
